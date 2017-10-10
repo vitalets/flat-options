@@ -7,29 +7,40 @@
 
 > One-level options with default values and validation
 
-Utility function to merge one-level options with default values and perform validation.
+Utility function to merge simple one-level options with default values and perform validation.
 
 ## Comparison to `Object.assign`
-Unlike `Object.assign` there are some benefits:
+Benefits over `Object.assign` are:
 
 * auto-excluding `undefined` values (useful for conditional options):
   ```js
   const defaults = {foo: 'bar'};
   const options = {foo: undefined};
+
   Object.assign({}, defaults, options); // -> {foo: undefined}
   // vs
   flatOptions(options, defaults); // -> {foo: 'bar'}
   ```
   
-* auto-validation of option keys:
+* auto-validation of options keys:
   ```js
   const defaults = {foo: 'bar'};
   const options = {unknown: 'baz'};
+
   Object.assign({}, defaults, options); // -> {foo: 'bar', unknown: 'baz'}
   // vs
   flatOptions(options, defaults); // -> throws error "Unknown option"!
   ```
+  
+## Comparison to other packages
+Benefits over existing [defaults](https://www.npmjs.com/package/defaults),
+[lodash.defaults](https://www.npmjs.com/package/lodash.defaults) and 
+[object.defaults](https://www.npmjs.com/package/object.defaults) are:
 
+* auto-validation of options keys
+* zero dependencies
+
+> Note that this package is only for **one-level** options, for nested ones please use alternatives
 
 ## Installation
 ```bash
@@ -53,10 +64,6 @@ class Foo {
 
 const foo = new Foo({a: 2}); // foo._options will be {a: 2, b: false} 
 ```
-
-## Related projects
-* [defaults](https://www.npmjs.com/package/defaults)
-* [lodash.defaults](https://www.npmjs.com/package/lodash.defaults)
 
 ## License
 MIT @ [Vitaliy Potapov](https://github.com/vitalets)
