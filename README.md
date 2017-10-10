@@ -9,7 +9,7 @@
 Utility function to merge one-level options with default values and perform validation.
 
 ## Comparison to `Object.assign`
-Unlike `Object.assign` there are some features:
+Unlike `Object.assign` there are some benefits:
 
 * auto-excluding `undefined` values (useful for conditional options):
   ```js
