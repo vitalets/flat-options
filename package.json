@@ -15,7 +15,7 @@
   },
   "scripts": {
     "code": "npm run lint",
-    "lint": "eslint .",
+    "lint": "eslint *.js",
     "lint-staged": "lint-staged",
     "babel": "babel index.js --out-dir lib",
     "test": "mocha test.js --compilers js:babel-register",
