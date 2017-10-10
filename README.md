@@ -1,6 +1,7 @@
 
 # flat-options
 
+[![Build Status](https://travis-ci.org/vitalets/flat-options.svg?branch=master)](https://travis-ci.org/vitalets/flat-options)
 [![npm](https://img.shields.io/npm/v/flat-options.svg)](https://www.npmjs.com/package/flat-options)
 [![license](https://img.shields.io/npm/l/flat-options.svg)](https://www.npmjs.com/package/flat-options)
 
