@@ -12,7 +12,7 @@ Utility function to merge simple one-level options with default values and perfo
 ## Comparison to `Object.assign`
 Benefits over `Object.assign` are:
 
-* auto-excluding `undefined` values (useful for conditional options):
+* exclude of `undefined` values (useful for conditional options):
   ```js
   const defaults = {foo: 'bar'};
   const options = {foo: undefined};
@@ -22,7 +22,7 @@ Benefits over `Object.assign` are:
   flatOptions(options, defaults); // -> {foo: 'bar'}
   ```
   
-* auto-validation of options keys:
+* validation of options keys:
   ```js
   const defaults = {foo: 'bar'};
   const options = {unknown: 'baz'};
@@ -40,7 +40,7 @@ Benefits over existing [defaults](https://www.npmjs.com/package/defaults),
 * auto-validation of options keys
 * zero dependencies
 
-> Note that this package is only for **one-level** options, for nested ones please use alternatives
+> Note that this package is only for **one-level** options, for nested ones please use alternative packages
 
 ## Installation
 ```bash
