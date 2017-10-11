@@ -2,7 +2,7 @@
 /* global it */
 
 const assert = require('assert');
-const flatOptions = require(process.env.TEST_LIB ? './lib/index' : './index').default;
+const flatOptions = process.env.TEST_LIB ? require('./lib') : require('./index');
 
 it('should be a function', function () {
   assert.equal(typeof flatOptions, 'function');
