@@ -32,7 +32,6 @@
     "{src,test}/**/*.js": "eslint"
   },
   "main": "lib/index.js",
-  "module": "index.js",
   "babel": {
     "presets": [
       "es2015"
