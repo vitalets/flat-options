@@ -1,6 +1,6 @@
 {
   "name": "flat-options",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "One-level options with default values and validation",
   "author": {
     "name": "Vitaliy Potapov",
